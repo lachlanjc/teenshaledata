@@ -14,7 +14,7 @@ post "/" do
     if params[:tsv_data][:type] == "text/tab-separated-values"
       parser = DataParser.new
       filename = parser.export_filename
-      parser.prepare_file! filename
+      parser.prepare_file! filename, parser.prepare_data(params)
       send_file filename, type: "text/comma-separated-values", disposition: "attachment"
     else
       Errors.new.need_tsv

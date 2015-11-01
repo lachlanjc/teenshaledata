@@ -1,11 +1,11 @@
 require "csv"
 
 class DataParser
-  def prepare_data
+  def prepare_data(params)
     parse params[:tsv_data][:tempfile].read
   end
 
-  def prepare_file!(filename = "", data = prepare_data)
+  def prepare_file!(filename = "", data)
     File.open(filename, "w") do |f|
       f.write "Date,Low range,Temperature\n"
       f.write data
