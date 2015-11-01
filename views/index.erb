@@ -8,22 +8,27 @@
   <meta name="description" content="Data crunching for the Teen Shale Network.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="/app.css" rel="stylesheet">
+  <link href="//brick.a.ssl.fastly.net/Source+Sans+Pro:400,700" rel="stylesheet">
 </head>
-<body>
-  <header class="py4 px2 bg-blue center">
-    <h1 class="white caps m0">Teen Shale Data</h1>
+<body class="bg-primary">
+  <header class="px2 py4 bg-white primary border-box">
+    <h1 class="mw6 mt0 mb0 mx-auto caps">Teen Shale Data</h1>
   </header>
-  <main class="md-col-8 mx-auto p2" style="max-width: 48rem;">
-    <%= markdown File.open("instructions.md", "r").read %>
-    <form action="" method="post" enctype="multipart/form-data"
-          class="md-col-6 mt3 p3 rounded center mx-auto bg-blue white dropzone">
-      <label class="block mb2">
-        <strong class="block mb1">Now upload your data:</strong>
-        <input type="file" name="tsv_data" accept="text/tab-separated-values">
-      </label>
-      <input name="commit" type="submit" value="Process"
-             class="btn btn-primary bg-white blue" style="width: 8rem;">
-    </form>
+  <main class="px2 py3 mx-auto" style="max-width: 48rem;">
+    <article class="mw6 mx-auto rounded border border-box white">
+      <div class="p3 border-box">
+        <%= markdown File.open("instructions.md", "r").read %>
+      </div>
+      <form action="" method="post" enctype="multipart/form-data"
+            class="p3 border-top border-box">
+        <label class="block mb2">
+          <strong class="block h2 mb1">Now upload the data.</strong>
+          <input type="file" name="tsv_data" accept="text/tab-separated-values">
+        </label>
+        <input name="commit" type="submit" value="Process"
+               class="btn" style="width: 8rem;">
+      </form>
+    </article>
   </main>
 </body>
 </html>
