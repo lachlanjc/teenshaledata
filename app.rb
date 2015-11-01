@@ -1,5 +1,4 @@
 require "chronic"
-require "pry"
 require "redcarpet"
 require "sinatra"
 $LOAD_PATH.unshift(File.dirname(__FILE__))
