@@ -1,6 +1,7 @@
 source "https://rubygems.org"
+ruby "2.1.2"
 
-gem "sinatra"
 gem "chronic"
+gem "foreman"
 gem "redcarpet"
-gem "shotgun"
+gem "sinatra"
