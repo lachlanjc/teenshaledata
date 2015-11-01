@@ -5,7 +5,7 @@ A simple Sinatra app for the [Teen Shale Network](https://twitter.com/TeenShaleN
 
 Example input/export data is in the `/examples` directory (real data!).
 
-[Check it out live](httsp://teenshaledata.herokuapp.com/)
+[Check it out live](http://teenshaledata.lachlanjc.me/)
 
 ___
 
