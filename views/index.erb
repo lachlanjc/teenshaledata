@@ -15,12 +15,12 @@
     <h1 class="mw6 mt0 mb0 mx-auto caps">Teen Shale Data</h1>
   </header>
   <main class="px2 py3 mx-auto" style="max-width: 48rem;">
-    <article class="mw6 mx-auto rounded border border-box white">
-      <div class="p3 border-box">
+    <article class="mw6 mx-auto white">
+      <div class="py3 border-box">
         <%= markdown File.open("instructions.md", "r").read %>
       </div>
       <form action="" method="post" enctype="multipart/form-data"
-            class="p3 border-top border-box">
+            class="py3 border-box">
         <label class="block mb2">
           <strong class="block h2 mb1">Now upload the data.</strong>
           <input type="file" name="tsv_data" accept="text/tab-separated-values">
