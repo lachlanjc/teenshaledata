@@ -14,7 +14,7 @@ class DataParser
   end
 
   def export_filename
-    "./tmp/teenshale_export_#{rand(8**8).to_s}.csv"
+    "./tmp/teenshale_#{rand(8**8).to_s}.csv"
   end
 
   def parse(file_contents)
