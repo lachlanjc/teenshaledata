@@ -9,32 +9,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="/app.css" rel="stylesheet">
 </head>
-<body class="bg-primary">
-  <header class="px2 py4 bg-white primary border-box">
-    <h1 class="mw6 mt0 mb0 mx-auto caps">Teen Shale Data</h1>
+<body>
+  <header class="px2 py4 bg-primary border-box">
+    <h1 class="mw6 mt0 mb0 mx-auto caps white">Teen Shale Data</h1>
   </header>
-  <main class="px2 py3 mx-auto" style="max-width: 48rem;">
-    <article class="mw6 mx-auto white">
-      <div class="py3 border-box">
-        <%= markdown File.open('instructions.md', 'r').read %>
-      </div>
-      <form action="" method="post" enctype="multipart/form-data"
-            class="py3 border-box">
-        <label class="block mb2">
-          <strong class="block h2 mb1">Now upload the data.</strong>
-          <input type="file" name="tsv_data" accept="text/tab-separated-values">
-        </label>
-        <control data-behavior="settings_control" class="block mb2" style="cursor: pointer;">
-          <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-               fill="#ffffff" style="position: relative; top: 2px; margin-right: 3px;">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
-          </svg>
-          <strong>Settings</strong>
-        </control>
-        <input name="commit" type="submit" value="Process"
-               class="btn" style="width: 8rem;">
-      </form>
-    </article>
+  <main class="mw6 px2 py3 mx-auto">
+    <div class="py3">
+      <%= markdown File.open('instructions.md', 'r').read %>
+    </div>
+    <form action="/" method="post" enctype="multipart/form-data" class="py3 border-top">
+      <label class="block mb2">
+        <strong class="block h2 mb1">Now upload the data.</strong>
+        <input type="file" name="tsv_data" accept="text/tab-separated-values">
+      </label>
+      <control data-behavior="settings_control" class="block mb2 primary" style="cursor: pointer;">
+        <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+             class="fill-primary" style="position: relative; top: 2px; margin-right: 3px;">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+        </svg>
+        <strong>Settings</strong>
+      </control>
+      <input name="commit" type="submit" value="Process"
+             class="btn" style="width: 8rem;">
+    </form>
   </main>
 </body>
 </html>

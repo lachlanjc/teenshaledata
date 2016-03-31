@@ -2,8 +2,6 @@
   Basscss (http://basscss.com) with customizations
 */
 
-body { margin: 0 }
-
 input {
   font-family: inherit;
   font-size: 1rem;
@@ -18,6 +16,8 @@ body {
   font-family: '-apple-system', BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;
   line-height: 1.5;
   font-size: 100%;
+  margin: 0;
+  color: #444;
 }
 
 h1, h2, h3, h4 {
@@ -42,13 +42,8 @@ h2, .h2 { font-size: 1.5rem }
 h3, .h3 { font-size: 1.25rem }
 h4, .h4 { font-size: 1rem }
 
-body {
-  color: #111;
-  background-color: #fff;
-}
-
 a {
-  color: #338eda;
+  color: #0074D9;
   text-decoration: none;
 }
 
@@ -75,8 +70,8 @@ hr {
   border: 1px solid transparent;
   -webkit-appearance: none;
 
-  background-color: #fff;
-  color: #338eda;
+  color: #fff;
+  background-color: #0074D9;
   border-radius: 3px;
 }
 
@@ -162,14 +157,18 @@ hr {
 .py4 { padding-top: 4rem; padding-bottom: 4rem }
 .px4 { padding-left: 4rem; padding-right: 4rem }
 
-.rounded { border-radius: 3px }
+.rounded { border-radius: 3px; }
 
-.white  { color: #fff }
-.bg-white { background-color: #fff }
+.white  { color: #fff; }
+.bg-white { background-color: #fff; }
 
-.primary  { color: #338eda }
-.bg-primary { background-color: #338eda }
+.primary  { color: #0074D9; }
+.bg-primary { background-color: #0074D9; }
+.fill-primary { fill: #0074D9; }
 
-.mw6 { max-width: 36rem }
-.border { border: 2px solid #fff }
-.border-top { border-top: 2px solid #fff }
+
+.mw6 { max-width: 36rem; }
+.mw7 { max-width: 48rem; }
+
+.border { border: 2px solid #CFD8DC; }
+.border-top { border-top: 2px solid #CFD8DC; }
