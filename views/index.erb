@@ -22,13 +22,17 @@
         <strong class="block h2 mb1">Now upload the data.</strong>
         <input type="file" name="tsv_data" accept="text/tab-separated-values">
       </label>
-      <control data-behavior="settings_control" class="block mb2 primary" style="cursor: pointer;">
-        <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-             class="fill-primary" style="position: relative; top: 2px; margin-right: 3px;">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
-        </svg>
-        <strong>Settings</strong>
-      </control>
+      <section class="block mb2" data-behavior="settings_content">
+        <strong class="block mb1">
+          What are the parameters called?
+          <span class="regular block">(we'll fill them in with these defaults otherwise)</span>
+        </strong>
+        <input type="text" name="name_1" placeholder="Date" class="field mb1 mr1">
+        <input type="text" name="name_2" placeholder="Low range" class="field mb1 mr1">
+        <input type="text" name="name_3" placeholder="Water temp" class="field mb1 mr1">
+        <input type="text" name="name_4" placeholder="Water height" class="field mb1 mr1">
+        <input type="text" name="name_5" placeholder="Air temp" class="field mb1 mr1">
+      </section>
       <input name="commit" type="submit" value="Process"
              class="btn" style="width: 8rem;">
     </form>
