@@ -1,9 +1,9 @@
-require "chronic"
-require "redcarpet"
-require "sinatra"
+require 'chronic'
+require 'redcarpet'
+require 'sinatra'
 $LOAD_PATH.unshift(File.dirname(__FILE__))
-require "lib/errors"
-require "lib/parse"
+require 'lib/errors'
+require 'lib/parse'
 
 get "/" do
   erb :index
