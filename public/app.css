@@ -96,6 +96,50 @@ hr {
     0 0 1px rgba(0,0,0,.125);
 }
 
+input,
+textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+label {
+  vertical-align: middle;
+}
+
+input[type=text] {
+  height: 2.25rem;
+  padding: .5rem .5rem;
+  vertical-align: middle;
+  -webkit-appearance: none;
+}
+
+textarea {
+  line-height: 1.75;
+  padding: .5rem .5rem;
+}
+
+.field {
+  border: 1px solid #CFD8DC;
+  border-radius: 3px;
+}
+
+.field:focus {
+  outline: none;
+  border-color: #0074D9;
+}
+
+.field:disabled {
+  background-color: rgba(0,0,0,.125);
+  opacity: .5;
+}
+
+.field:read-only {
+  background-color: rgba(0,0,0,.125);
+}
+
 .bold    { font-weight: bold }
 .regular { font-weight: normal }
 .caps    { text-transform: uppercase; letter-spacing: .2em; }
