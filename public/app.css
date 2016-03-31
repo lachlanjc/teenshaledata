@@ -20,7 +20,7 @@ label {
 }
 
 body {
-  font-family: 'Source Sans Pro', '-apple-system', 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: '-apple-system', BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;
   line-height: 1.5;
   font-size: 100%;
 }
@@ -46,8 +46,6 @@ h1, .h1 { font-size: 2rem }
 h2, .h2 { font-size: 1.5rem }
 h3, .h3 { font-size: 1.25rem }
 h4, .h4 { font-size: 1rem }
-h5, .h5 { font-size: .875rem }
-h6, .h6 { font-size: .75rem }
 
 body {
   color: #111;
