@@ -1,4 +1,5 @@
-require "csv"
+require 'csv'
+require 'pry'
 
 class DataParser
   def prepare_data(params)
