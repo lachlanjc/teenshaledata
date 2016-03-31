@@ -8,6 +8,7 @@
   <meta name="description" content="Data crunching for the Teen Shale Network.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="/app.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
 </head>
 <body class="bg-primary">
   <header class="px2 py4 bg-white primary border-box">
@@ -24,6 +25,10 @@
           <strong class="block h2 mb1">Now upload the data.</strong>
           <input type="file" name="tsv_data" accept="text/tab-separated-values">
         </label>
+        <control data-behavior="settings_control" class="block mb2" style="cursor: pointer;">
+          <span class="ion-android-add-circle"></span>
+          <span class="ml1 bold">Settings</span>
+        </control>
         <input name="commit" type="submit" value="Process"
                class="btn" style="width: 8rem;">
       </form>
