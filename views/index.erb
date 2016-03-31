@@ -29,9 +29,30 @@
         </svg>
         <strong>Settings</strong>
       </control>
+      <section class="block mb2" data-behavior="settings_content">
+        <strong class="block mb1">
+          What are the parameters called?
+          <span class="regular block">(we'll fill them in with these defaults otherwise)</span>
+        </strong>
+        <input type="text" name="name_1" placeholder="Date" class="field mb1 mr1">
+        <input type="text" name="name_2" placeholder="Low range" class="field mb1 mr1">
+        <input type="text" name="name_3" placeholder="Water temp" class="field mb1 mr1">
+        <input type="text" name="name_4" placeholder="Water height" class="field mb1 mr1">
+        <input type="text" name="name_5" placeholder="Air temp" class="field mb1 mr1">
+      </section>
       <input name="commit" type="submit" value="Process"
              class="btn" style="width: 8rem;">
     </form>
   </main>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('[data-behavior~=settings_content]').hide(100);
+      $(document).on('click', '[data-behavior~=settings_control]', function() {
+        $(this).hide('fast');
+        return $('[data-behavior~=settings_content]').show(200);
+      });
+    });
+  </script>
 </body>
 </html>
