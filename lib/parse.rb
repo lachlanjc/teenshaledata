@@ -1,5 +1,5 @@
 require 'csv'
-require 'pry'
+require 'pry-byebug'
 
 class DataParser
   def prepare_data(params)
