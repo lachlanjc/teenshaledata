@@ -45,14 +45,12 @@ class DataParser
     end
 
     # Create a CSV file with exported data
-    file_export = CSV.generate do |csv|
+    CSV.generate do |csv|
       # Append each line of the final data to the CSV
       final_data.each do |hash|
         csv << hash.values
       end
     end
-
-    file_export
   end
 
   protected
