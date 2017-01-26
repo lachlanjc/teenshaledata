@@ -19,19 +19,16 @@
     </div>
     <form action="/" method="post" enctype="multipart/form-data" class="py3 border-top">
       <label class="block mb2">
-        <strong class="block h2 mb1">Now upload the data.</strong>
+        <strong class="block h3 mb1">Now upload the data…</strong>
         <input type="file" name="tsv_data" accept="text/tab-separated-values">
       </label>
       <section class="block mb2" data-behavior="settings_content">
-        <strong class="block mb1">
-          What are the parameters called?
-          <span class="regular block">(we'll fill them in with these defaults otherwise)</span>
-        </strong>
-        <input type="text" name="name_1" placeholder="Date" class="field mb1 mr1">
-        <input type="text" name="name_2" placeholder="Low range" class="field mb1 mr1">
-        <input type="text" name="name_3" placeholder="Water temp" class="field mb1 mr1">
-        <input type="text" name="name_4" placeholder="Water height" class="field mb1 mr1">
-        <input type="text" name="name_5" placeholder="Air temp" class="field mb1 mr1">
+        <strong class="block h3 mb1">…and label the columns.</strong>
+        <input type="text" name="name_1" placeholder="Date" class="field mb1">
+        <input type="text" name="name_2" placeholder="Temperature" class="field mb1">
+        <input type="text" name="name_3" class="field mb1">
+        <input type="text" name="name_4" class="field mb1">
+        <input type="text" name="name_5" class="field mb1">
       </section>
       <input name="commit" type="submit" value="Process"
              class="btn" style="width: 8rem;">

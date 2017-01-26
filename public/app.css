@@ -13,7 +13,14 @@ label {
 }
 
 body {
-  font-family: '-apple-system', BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Helvetica Neue',
+    Helvetica,
+    sans-serif;
   line-height: 1.5;
   font-size: 100%;
   margin: 0;
@@ -122,6 +129,7 @@ textarea {
 }
 
 .field {
+  display: block;
   border: 1px solid #CFD8DC;
   border-radius: 3px;
 }
@@ -208,8 +216,6 @@ textarea {
 
 .primary  { color: #0074D9; }
 .bg-primary { background-color: #0074D9; }
-.fill-primary { fill: #0074D9; }
-
 
 .mw6 { max-width: 36rem; }
 .mw7 { max-width: 48rem; }
