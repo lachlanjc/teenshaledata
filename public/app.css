@@ -1,13 +1,6 @@
 /*
-
-  Basscss
-  http://basscss.com
-
-  Generated with http://basscss.com/customize
-
+  Basscss (http://basscss.com) with customizations
 */
-
-body { margin: 0 }
 
 input {
   font-family: inherit;
@@ -20,12 +13,21 @@ label {
 }
 
 body {
-  font-family: '-apple-system', BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Helvetica Neue',
+    Helvetica,
+    sans-serif;
   line-height: 1.5;
   font-size: 100%;
+  margin: 0;
+  color: #444;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
   font-weight: bold;
   line-height: 1.25;
   margin-top: 1em;
@@ -47,13 +49,8 @@ h2, .h2 { font-size: 1.5rem }
 h3, .h3 { font-size: 1.25rem }
 h4, .h4 { font-size: 1rem }
 
-body {
-  color: #111;
-  background-color: #fff;
-}
-
 a {
-  color: #338eda;
+  color: #0074D9;
   text-decoration: none;
 }
 
@@ -80,8 +77,8 @@ hr {
   border: 1px solid transparent;
   -webkit-appearance: none;
 
-  background-color: #fff;
-  color: #338eda;
+  color: #fff;
+  background-color: #0074D9;
   border-radius: 3px;
 }
 
@@ -104,6 +101,51 @@ hr {
   box-shadow: inset 0 0 0 20rem rgba(0,0,0,.125),
     inset 0 3px 4px 0 rgba(0,0,0,.25),
     0 0 1px rgba(0,0,0,.125);
+}
+
+input,
+textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+label {
+  vertical-align: middle;
+}
+
+input[type=text] {
+  height: 2.25rem;
+  padding: .5rem .5rem;
+  vertical-align: middle;
+  -webkit-appearance: none;
+}
+
+textarea {
+  line-height: 1.75;
+  padding: .5rem .5rem;
+}
+
+.field {
+  display: block;
+  border: 1px solid #CFD8DC;
+  border-radius: 3px;
+}
+
+.field:focus {
+  outline: none;
+  border-color: #0074D9;
+}
+
+.field:disabled {
+  background-color: rgba(0,0,0,.125);
+  opacity: .5;
+}
+
+.field:read-only {
+  background-color: rgba(0,0,0,.125);
 }
 
 .bold    { font-weight: bold }
@@ -167,14 +209,16 @@ hr {
 .py4 { padding-top: 4rem; padding-bottom: 4rem }
 .px4 { padding-left: 4rem; padding-right: 4rem }
 
-.rounded { border-radius: 3px }
+.rounded { border-radius: 3px; }
 
-.white  { color: #fff }
-.bg-white { background-color: #fff }
+.white  { color: #fff; }
+.bg-white { background-color: #fff; }
 
-.primary  { color: #338eda }
-.bg-primary { background-color: #338eda }
+.primary  { color: #0074D9; }
+.bg-primary { background-color: #0074D9; }
 
-.mw6 { max-width: 36rem }
-.border { border: 2px solid #fff }
-.border-top { border-top: 2px solid #fff }
+.mw6 { max-width: 36rem; }
+.mw7 { max-width: 48rem; }
+
+.border { border: 2px solid #CFD8DC; }
+.border-top { border-top: 2px solid #CFD8DC; }

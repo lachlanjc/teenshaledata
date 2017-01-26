@@ -1,21 +1,28 @@
+require 'sinatra'
+require 'better_errors'
 require 'chronic'
 require 'redcarpet'
-require 'sinatra'
+require 'active_support/all'
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'lib/errors'
 require 'lib/parse'
 
-get "/" do
+configure :development do
+  use BetterErrors::Middleware
+  BetterErrors.application_root = __dir__
+end
+
+get '/' do
   erb :index
 end
 
-post "/" do
+post '/' do
   if params[:tsv_data]
-    if params[:tsv_data][:type] == "text/tab-separated-values"
+    if params[:tsv_data][:type] == 'text/tab-separated-values'
       parser = DataParser.new
-      filename = parser.export_filename
-      parser.prepare_file! filename, parser.prepare_data(params)
-      send_file filename, type: "text/comma-separated-values", disposition: "attachment"
+      path = parser.prepare_file!(params)
+      name = path.split(/\//).last.to_s
+      send_file path, type: 'text/comma-separated-values', filename: name
     else
       Errors.new.need_tsv
     end
@@ -24,6 +31,6 @@ post "/" do
   end
 end
 
-def markdown(str = "")
+def markdown(str = '')
   Redcarpet::Markdown.new(Redcarpet::Render::HTML).render str.to_s
 end

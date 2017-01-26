@@ -9,25 +9,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="/app.css" rel="stylesheet">
 </head>
-<body class="bg-primary">
-  <header class="px2 py4 bg-white primary border-box">
-    <h1 class="mw6 mt0 mb0 mx-auto caps">Teen Shale Data</h1>
+<body>
+  <header class="px2 py4 bg-primary border-box">
+    <h1 class="mw6 mt0 mb0 mx-auto caps white">Teen Shale Data</h1>
   </header>
-  <main class="px2 py3 mx-auto" style="max-width: 48rem;">
-    <article class="mw6 mx-auto white">
-      <div class="py3 border-box">
-        <%= markdown File.open("instructions.md", "r").read %>
-      </div>
-      <form action="" method="post" enctype="multipart/form-data"
-            class="py3 border-box">
-        <label class="block mb2">
-          <strong class="block h2 mb1">Now upload the data.</strong>
-          <input type="file" name="tsv_data" accept="text/tab-separated-values">
-        </label>
-        <input name="commit" type="submit" value="Process"
-               class="btn" style="width: 8rem;">
-      </form>
-    </article>
+  <main class="mw6 px2 py3 mx-auto">
+    <div class="py3">
+      <%= markdown File.open('instructions.md', 'r').read %>
+    </div>
+    <form action="/" method="post" enctype="multipart/form-data" class="py3 border-top">
+      <label class="block mb2">
+        <strong class="block h3 mb1">Now upload the data…</strong>
+        <input type="file" name="tsv_data" accept="text/tab-separated-values">
+      </label>
+      <section class="block mb2" data-behavior="settings_content">
+        <strong class="block h3 mb1">…and label the columns.</strong>
+        <input type="text" name="name_1" placeholder="Date" class="field mb1">
+        <input type="text" name="name_2" placeholder="Temperature" class="field mb1">
+        <input type="text" name="name_3" class="field mb1">
+        <input type="text" name="name_4" class="field mb1">
+        <input type="text" name="name_5" class="field mb1">
+      </section>
+      <input name="commit" type="submit" value="Process"
+             class="btn" style="width: 8rem;">
+    </form>
   </main>
 </body>
 </html>
